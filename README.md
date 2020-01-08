@@ -28,7 +28,7 @@ A los efectos prácticos de esta guía se instalará la distribución de `GNU/Li
 
 Se dispone además de un direccionamiento `IPv4` con acceso a `Internet`.
 
-El sistema operativo instalado, será utilizado con el propósito de explotar un sistema de escritorio o estación de trabajo para usuarios finales. Desmitificando
+El sistema operativo instalado, será utilizado con el propósito de explotar un sistema de escritorio o estación de trabajo para usuarios finales.
 
 ## Instalación
 
@@ -263,6 +263,8 @@ Arch Linux se instala ejecutando el entorno `live` de la imagen `ISO` desde un d
     bootctl --path=/boot install
     ```
 
+    c. Configurar gestor de arranque.
+
     ```bash
     nano /boot/loader/loader.conf
 
@@ -298,7 +300,7 @@ Arch Linux se instala ejecutando el entorno `live` de la imagen `ISO` desde un d
     grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
     ```
 
-    c. Ejecutar el comando `grub-mkconfig` para generar el fichero `/boot/grub/grub.cfg`.
+    c. Configurar gestor de arranque.
 
     ```bash
     grub-mkconfig -o /boot/grub/grub.cfg
@@ -310,7 +312,7 @@ Arch Linux se instala ejecutando el entorno `live` de la imagen `ISO` desde un d
     passwd
     ```
 
-9. Abandonar el entorno de jaula `chroot`, desmontar las particiones y reiniciar el sistema.
+9. Abandonar entorno `chroot`, desmontar las particiones y reiniciar el sistema.
 
     ```bash
     exit
