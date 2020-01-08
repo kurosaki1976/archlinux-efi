@@ -28,7 +28,7 @@ A los efectos prácticos de esta guía se instalará la distribución de `GNU/Li
 
 Se dispone además de un direccionamiento `IPv4` con acceso a `Internet`.
 
-El sistema operativo instalado, será utilizado con el proósito de explotar un sistema de escritorio o estación de trabajo para usuarios finales. Desmitificando
+El sistema operativo instalado, será utilizado con el propósito de explotar un sistema de escritorio o estación de trabajo para usuarios finales. Desmitificando
 
 ## Instalación
 
@@ -162,7 +162,7 @@ Arch Linux se instala ejecutando el entorno `live` de la imagen `ISO` desde un d
     pacstrap -i /mnt base base-devel linux-firmware
     ```
 
-    El paquete `base` no incluye todas las herramientas presentes en el medio de instalación `live`, por lo que puede ser necesario instalar otros paquetes para que un sistema base mínimo sea completamente funcional. Se recomienda instalar herramientas necesarias para la conexión a redes (`net-tools` e `iputils`), un editor de texto (`nano`, `vi` o `vim`) y paquetes para acceder a la documentación en las páginas de manual o información (`man-db`, `man-pages` y `texinfo`).
+    El paquete `base` no incluye todas las herramientas presentes en el medio de instalación `live`, por lo que puede ser necesario instalar otros paquetes para que un sistema base mínimo sea completamente funcional. Se recomienda instalar herramientas necesarias para la conexión a redes (`net-tools`, `dnsutils` e `iputils`), un editor de texto (`nano`, `vi` o `vim`) y paquetes para acceder a la documentación en las páginas de manual o información (`man-db`, `man-pages` y `texinfo`).
 
     Para instalar otros paquetes o grupos de paquetes se debe añadir sus nombres al comando `pacstrap` o utilizar `pacman`, durante el entorno de jaula `chroot`.
 
@@ -217,7 +217,27 @@ Arch Linux se instala ejecutando el entorno `live` de la imagen `ISO` desde un d
     ln -sf /usr/share/zoneinfo/America/Havana /etc/localtime
     ```
 
-5. Generar la imagen `initramfs`.
+5. Configurar la red.
+
+    a. Crear el archivo `/etc/hostname`.
+
+    ```bash
+    echo "archlinux" > /etc/hostname
+    ```
+
+    b. Editar fichero `/etc/hosts`.
+
+    ```bash
+    nano /etc/hosts
+
+    127.0.0.1   localhost.localdomain   localhost
+    ::1         localhost.localdomain   localhost
+    127.0.1.1   archlinux.localdomain   archlinux
+    ```
+
+    > **NOTA**: Si el sistema tendrá una dirección `IP` permanente, se debe usar dicha dirección, en lugar de `127.0.1.1`.
+
+6. Generar la imagen `initramfs`.
 
     ```bash
     mkinitcpio -P
@@ -225,7 +245,7 @@ Arch Linux se instala ejecutando el entorno `live` de la imagen `ISO` desde un d
 
     > **NOTA**: Normalmente no es necesario crear una imagen `initramfs` nueva, dado que `mkinitcpio` se ejecuta durante la instalación del paquete `kernel` con `pacstrap`.
 
-6. Instalar y configurar el gestor de arranque
+7. Instalar y configurar el gestor de arranque.
 
     #### `Systemd-boot`
 
@@ -284,31 +304,11 @@ Arch Linux se instala ejecutando el entorno `live` de la imagen `ISO` desde un d
     grub-mkconfig -o /boot/grub/grub.cfg
     ```
 
-7. Establecer contraseña del superusuario `root`.
+8. Establecer contraseña del superusuario `root`.
 
     ```bash
     passwd
     ```
-
-8. Configurar la red.
-
-    a. Crear el archivo `/etc/hostname`.
-
-    ```bash
-    echo "archlinux" > /etc/hostname
-    ```
-
-    b. Editar fichero `/etc/hosts`.
-
-    ```bash
-    nano /etc/hosts
-
-    127.0.0.1   localhost.localdomain   localhost
-    ::1         localhost.localdomain   localhost
-    127.0.1.1   archlinux.localdomain   archlinux
-    ```
-
-    > **NOTA**: Si el sistema tendrá una dirección `IP` permanente, se debe usar dicha dirección, en lugar de `127.0.1.1`.
 
 9. Abandonar el entorno de jaula `chroot`, desmontar las particiones y reiniciar el sistema.
 
@@ -318,15 +318,15 @@ Arch Linux se instala ejecutando el entorno `live` de la imagen `ISO` desde un d
     reboot
     ```
 
-    > **NOTA**: Se debe retirar el medio de instalación e iniciar sesión en el nuevo sistema con la cuenta del superusuario `root`.
+    > **NOTA**: Se debe retirar el medio de instalación e iniciar sesión en el sistema con la cuenta del superusuario `root`.
 
 ## Posinstalación
 
 1. Crear cuenta de usuario.
 
     ```bash
-    useradd -m -g <users> -G <wheel> -s </bin/bash> <username>
-    passwd <username>
+    useradd -m -G users,wheel,sudo -s /bin/bash -c "Descripción de usuario" <nombre_usuario>
+    passwd <nombre_usuario>
     ```
 
 ## Referencias
