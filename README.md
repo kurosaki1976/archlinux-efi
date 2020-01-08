@@ -227,7 +227,7 @@ Arch Linux se instala ejecutando el entorno `live` de la imagen `ISO` desde un d
 
 6. Instalar y configurar el gestor de arranque
 
-    ### `Systemd-boot`
+    #### `Systemd-boot`
 
     a. Instalar paquetes necesarios.
 
@@ -264,7 +264,7 @@ Arch Linux se instala ejecutando el entorno `live` de la imagen `ISO` desde un d
 
     > **NOTA**: En sistemas con procesadores `AMD`, definir `initrd  /amd-ucode.img` en lugar de `initrd  /intel-ucode.img`.
 
-    ###`GRUB`
+    #### `GRUB`
 
     a. Instalar paquetes necesarios.
 
