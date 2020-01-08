@@ -32,7 +32,7 @@ El sistema operativo instalado, será utilizado con el propósito de explotar un
 
 ## Instalación
 
-Arch Linux se instala ejecutando el entorno `live` de la imagen `ISO` desde un dispositivo óptico, memoria `USB` o una red con `PXE`. La imagen `ISO` puede descargarse desde [Arch Linux - Downloads](https://www.archlinux.org/download/).
+`Arch Linux` se instala ejecutando el entorno `live` de la imagen `ISO` desde un dispositivo óptico, memoria `USB` o una red con `PXE`. La imagen `ISO` puede descargarse desde [Arch Linux - Downloads](https://www.archlinux.org/download/).
 
 #### Preinstalación
 
@@ -46,7 +46,7 @@ Arch Linux se instala ejecutando el entorno `live` de la imagen `ISO` desde un d
 
 2. Verificar la modalidad de arranque.
 
-    Si el modo `UEFI` está activado, la imagen `ISO` arrancará mdeiante `systemd-boot`. Para comprobarlo, se debe listar el contenido del directorio `efivars`, ejecutando `ls /sys/firmware/efi/efivars`. Si no existe el directorio, el sistema ha iniciado en modo `BIOS` o `CSM` (`Compatibility Support Module`).
+    Si el modo `UEFI` está activado, la imagen `ISO` arrancará mediante `systemd-boot`. Para comprobarlo, se debe listar el contenido del directorio `efivars`, ejecutando `ls /sys/firmware/efi/efivars`. Si no existe el directorio, el sistema ha iniciado en modo `BIOS` o `CSM` (`Compatibility Support Module`).
 
 3. Configurar conexión de red para acceder a los repositorios de paquetes.
 
@@ -80,7 +80,7 @@ Arch Linux se instala ejecutando el entorno `live` de la imagen `ISO` desde un d
     d. Establecer servidores de nombres de dominio.
 
     ```bash
-    nano /etc/resolv.config
+    nano /etc/resolv.conf
 
     nameserver 8.8.8.8
     nameserver 8.8.4.4
