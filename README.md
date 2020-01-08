@@ -58,6 +58,12 @@ El sistema operativo instalado, será utilizado con el propósito de explotar un
 
     ```bash
     ifconfig -a
+    
+    enp3s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        ether 6c:b3:11:4d:05:96  txqueuelen 1000  (Ethernet)
+
+    lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
     ```
 
     b. Definir dirección `IP` estática.
@@ -95,7 +101,7 @@ El sistema operativo instalado, será utilizado con el propósito de explotar un
     ip route show
     ```
 
-    > **NOTA**: Opcinalmente se puede utilizar el comando `ping` para verificar la conexión.
+    > **NOTA**: Opcionalmente se puede utilizar el comando `ping` para verificar la conexión.
 
 4. Actualizar la hora del sistema.
 
@@ -115,7 +121,7 @@ El sistema operativo instalado, será utilizado con el propósito de explotar un
     fdisk /dev/sda
     ```
 
-    Teclear la opción `g` para crear una nueva tabla de particiones de tipo `GPT`. Teclear la opción `n` para crear las nuevas particiones. La partición de arranque debe ser de tipo `EFI System` y la raíz, `Linux filesystem`. Al finalizar teclear la opción `w` para escribir los cambios.
+    Teclear la opción `g` para crear una nueva tabla de particiones de tipo `GPT`. Teclear la opción `n` para crear las nuevas particiones. La partición de arranque debe ser de tipo `EFI System` y la raíz, `Linux filesystem`. Al finalizar, teclear la opción `w` para escribir los cambios.
 
     b. Definir esquema de tabla de particiones en disco `/dev/sdb`.
 
@@ -123,7 +129,7 @@ El sistema operativo instalado, será utilizado con el propósito de explotar un
     fdisk /dev/sdb
     ```
 
-    Teclear la opción `g` para crear una nueva table de particiones de tipo `GPT`. Teclear la opción `n` para crear las nuevas particiones. Las particiones `/var`, `/tmp` y `/home` deben ser de tipo `Linux filesystem`, y el área de intercambio, `Linux swap`.  Al finalizar teclear la opción `w` para escribir los cambios.
+    Teclear la opción `g` para crear una nueva table de particiones de tipo `GPT`. Teclear la opción `n` para crear las nuevas particiones. Las particiones `/var`, `/tmp` y `/home` deben ser de tipo `Linux filesystem`, y el área de intercambio, `Linux swap`.  Al finalizar, teclear la opción `w` para escribir los cambios.
 
     > **NOTA**: También se pueden usar las herramientas `gdisk`, `sfdisk` y `parted` para discos particionados con `GPT`.
 
