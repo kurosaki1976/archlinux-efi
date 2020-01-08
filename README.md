@@ -61,9 +61,6 @@ El sistema operativo instalado, será utilizado con el propósito de explotar un
     
     enp3s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         ether 6c:b3:11:4d:05:96  txqueuelen 1000  (Ethernet)
-
-    lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
-        inet 127.0.0.1  netmask 255.0.0.0
     ```
 
     b. Definir dirección `IP` estática.
