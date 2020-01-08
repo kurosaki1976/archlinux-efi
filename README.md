@@ -14,7 +14,7 @@ Los desarrolladores definen el proyecto bajo el acrónimo `KISS` (`Keep It Simpl
 
 #### ¿Qué es UEFI?
 
-La `Unified Extensible Firmware Interface` (`UEFI` o `EFI` para abreviar) es un modelo distinto de interfaz para interactuar entre los sistemas operativos y el firmware. Proporciona un entorno estándar para iniciar un sistema operativo y ejecutar aplicaciones previas al inicio. Es un método distito del comunmente usado "código de arranque `MBR`" seguido por los sistemas `BIOS` estándar presentado en las computadoras personales `IBM PC` como `IBM PC ROM BIOS`.
+La `Unified Extensible Firmware Interface` (`UEFI` o `EFI` para abreviar) es un modelo de interfaz para interactuar entre los sistemas operativos y el firmware. Proporciona un entorno estándar para iniciar un sistema operativo y ejecutar aplicaciones previas al inicio. Es un método distito del comunmente usado "código de arranque `MBR`" seguido por los sistemas `BIOS` estándar presentado en las computadoras personales `IBM PC` como `IBM PC ROM BIOS`.
 
 ## Consideraciones previas
 
