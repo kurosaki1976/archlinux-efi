@@ -8,9 +8,9 @@
 
 #### ¿Qué es Arch Linux?
 
-Arch Linux es una distribución GNU/Linux de propósito general, desarrollada independientemente para x86-64, que se esfuerza por proporcionar las últimas versiones estables de la mayoría del software, siguiendo un modelo de lanzamiento continuo (`rolling-release`). La instalación por defecto deja un sistema de base mínima, que el usuario configurará posteriormente agregando lo que necesite.
+`Arch Linux` es una distribución `GNU/Linux` de propósito general, desarrollada independientemente para `x86-64`, que se esfuerza por proporcionar las últimas versiones estables de la mayoría del software, siguiendo un modelo de lanzamiento continuo (`rolling-release`). La instalación por defecto deja un sistema de base mínima, que el usuario configurará posteriormente agregando lo que necesite.
 
-Los desarrolladores definen el proyecto bajo el acrónimo `KISS` (`Keep It Simple, Stupid`; en español Mantenlo simple, estúpido). Arch Linux se enfoca en 5 principios generales: simplicidad, modernidad, pragmatismo, centrado en el usuario y versatilidad; siendo el primero, su principal objetivo. Los desarrolladores de Arch son voluntarios no remunerados, a tiempo parcial, y no hay perspectivas de monetizar Arch Linux, por lo que seguirá siendo libre en todos los sentidos de la palabra.
+Los desarrolladores definen el proyecto bajo el acrónimo `KISS` (`Keep It Simple, Stupid`; en español Mantenlo simple, estúpido). `Arch Linux` se enfoca en 5 principios generales: simplicidad, modernidad, pragmatismo, centrado en el usuario y versatilidad; siendo el primero, su principal objetivo. Los desarrolladores de Arch son voluntarios no remunerados, a tiempo parcial, y no hay perspectivas de monetizar `Arch Linux`, por lo que seguirá siendo libre en todos los sentidos de la palabra.
 
 #### ¿Qué es UEFI?
 
