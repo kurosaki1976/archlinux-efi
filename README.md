@@ -181,7 +181,7 @@ El sistema operativo instalado, será utilizado con el propósito de explotar un
     genfstab -U -p /mnt >> /mnt/etc/fstab
     ```
 
-    > **NOTA**: Se debe comprobar el archivo resultante en `/mnt/etc/fstab`, y modificarlo añadiendo las opciones `noatime` y `discard` en el caso de la partición raíz y solamente `noatime` para la particón de arranque `EFI`; estas características son necesarias para prolongar la vida últil del disco `SSD`.
+    > **NOTA**: Se debe comprobar el archivo resultante en `/mnt/etc/fstab`, y modificarlo añadiendo las opciones `noatime` y `discard` en el caso de la partición raíz y solamente `noatime` para la partición de arranque `EFI`; estas características son necesarias para prolongar la vida últil del disco `SSD`.
 
 2. Activar entorno de jaula `chroot`.
 
