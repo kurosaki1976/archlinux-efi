@@ -211,7 +211,7 @@ Arch Linux se instala ejecutando el entorno `live` de la imagen `ISO` desde un d
     ```bash
     echo "KEYMAP=us-acentos" > nano /etc/vconsole.conf
     ```
-4. Defina la zona horaria.
+4. Definir la zona horaria.
 
     ```bash
     ln -sf /usr/share/zoneinfo/America/Havana /etc/localtime
